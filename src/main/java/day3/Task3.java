@@ -8,9 +8,8 @@ package day3;
 */
 
 import java.util.Scanner;
-
 public class Task3 {
- static    double i;
+ //static    double i;
     public static void main(String[] args) {
 
         calculator();
@@ -19,31 +18,17 @@ public class Task3 {
 
         public static void calculator(){
             Scanner scanner = new Scanner(System.in);
-
-
-            while ( i != 5) {
+            for (int i = 0; i < 5; i++) {
+           // while ( i != 5) {
                 double divisible = scanner.nextDouble();
                 double divider = scanner.nextDouble();
-                i++;
+                //i++;
                if(divider==0 || divisible == 0){
                    System.out.println("Деление на ноль");
                    continue;
                }
-
-                double  s= divisible/divider;
-                System.out.println(s);
+                System.out.println(divisible/divider);
             }
-
-
-
-
-
-
-
-
-
-
-
          }
 
 
