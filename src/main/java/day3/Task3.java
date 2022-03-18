@@ -11,17 +11,18 @@ import java.util.Scanner;
 public class Task3 {
  //static    double i;
     public static void main(String[] args) {
-
-        calculator();
+        double divisible = 0;
+        double divider = 0;
+        calculator(divisible,divider);
 
     }
 
-        public static void calculator(){
+        public static void calculator(double divisible, double divider){
             Scanner scanner = new Scanner(System.in);
             for (int i = 0; i < 5; i++) {
            // while ( i != 5) {
-                double divisible = scanner.nextDouble();
-                double divider = scanner.nextDouble();
+                 divisible = scanner.nextDouble();
+                 divider = scanner.nextDouble();
                 //i++;
                if(divider==0 || divisible == 0){
                    System.out.println("Деление на ноль");
