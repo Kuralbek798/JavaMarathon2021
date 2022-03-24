@@ -20,17 +20,16 @@ public class Task1 {
         int[] array = new int[n];
         Random random = new Random();
 
-        for (int i =0; i <array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
 
             array[i] = random.nextInt(9) + 1;
 
         }
 
 
-        System.out.println();
-        System.out.println("Длинна массива : " +array.length);
-        for (int v:array ) {
-            System.out.print(v + ", " );
+        System.out.println("Длинна массива : " + array.length);
+        for (int v : array) {
+            System.out.print(v + ", ");
 
         }
         System.out.println();
@@ -49,33 +48,33 @@ public class Task1 {
 
             } else if (j < 8) numbersDownEight++; //проверочный код
 
-            else numbersEqualEight++;
+            else numbersEqualEight++;             //проверочный код
+
+            for (int k : array) {
+                if (k == 1) {
+                    numbersEqualsOne++;
+                } else numbersNotEqualsOne++;       //проверочный код
+            }
+
+            for (int a : array) {
+                if (a % 2 == 0) {
+                    EvenNumbers++;
+                } else NonEvenNumbers++;
+            }
+
+
+            for (int c : array) {
+                sum += c;
+            }
+
+            System.out.println("Количество чисел больше восьми : " + numbersOverEight);
+            System.out.println("Количество чисел меньше восьми : " + numbersDownEight); // проверочная строка
+            System.out.println("Количество чисел равных восьми : " + numbersEqualEight); // проверочная строка
+            System.out.println("Количество чисел равных одному : " + numbersEqualsOne);
+            System.out.println("Количество чисел не равных одному : " + numbersNotEqualsOne); //проверочная количество чисел не равных 1
+            System.out.println("Количество четных чисел : " + EvenNumbers);
+            System.out.println("Количество не четных чисел : " + NonEvenNumbers);
+            System.out.println("Сумма всех чисел : " + sum);
         }
-
-        for (int k : array) {
-            if (k == 1) {
-                numbersEqualsOne++;
-            } else numbersNotEqualsOne++;
-        }
-
-        for (int j : array) {
-            if (j % 2 == 0) {
-                EvenNumbers++;
-            } else NonEvenNumbers++;
-        }
-
-
-        for (int j : array) {
-            sum += j;
-        }
-
-        System.out.println("Количество чисел больше восьми : " + numbersOverEight);
-        System.out.println("Количество чисел меньше восьми : " + numbersDownEight); // проверочная строка
-        System.out.println("Количество чисел равных восьми : " + numbersEqualEight); // проверочная строка
-        System.out.println("Количество чисел равных одному : " + numbersEqualsOne);
-        System.out.println("Количество чисел не равных одному : " + numbersNotEqualsOne); //проверочная количество чисел не равных 1
-        System.out.println("Количество четных чисел : " + EvenNumbers);
-        System.out.println("Количество не четных чисел : " + NonEvenNumbers);
-        System.out.println("Сумма всех чисел : " + sum);
     }
 }
