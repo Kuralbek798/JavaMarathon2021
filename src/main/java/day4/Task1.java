@@ -73,7 +73,7 @@ public class Task1 {
         System.out.println("Количество чисел меньше восьми : " + numbersDownEight); // проверочная строка
         System.out.println("Количество чисел равных восьми : " + numbersEqualEight); // проверочная строка
         System.out.println("Количество чисел равных одному : " + numbersEqualsOne);
-        System.out.println("Количество чисел не равных одному : " + numbersNotEqualsOne);
+        System.out.println("Количество чисел не равных одному : " + numbersNotEqualsOne); //проверочная количество чисел не равных 1
         System.out.println("Количество четных чисел : " + EvenNumbers);
         System.out.println("Количество не четных чисел : " + NonEvenNumbers);
         System.out.println("Сумма всех чисел : " + sum);
