@@ -39,16 +39,12 @@ public class Task2 {
        int quantityNumbersZero =0;
         int sumQuantityNumberszero = 0;
 
-        for (int j : array) {
-
+        for (int j : array)
             if (j % 10 == 0) {                        //количество элементов массива, оканчивающихся на 0
                 quantityNumbersZero++;
 
                 sumQuantityNumberszero += j;          //сумму элементов массива, оканчивающихся на 0
             }
-
-
-        }
         System.out.println(sumQuantityNumberszero);
         System.out.println(quantityNumbersZero);
     }
