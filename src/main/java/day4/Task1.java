@@ -28,7 +28,8 @@ public class Task1 {
 
 
         System.out.println("Длинна массива : " + array.length);
-        for (int v : array) {
+        for (int i = 0; i < array.length; i++) {
+            int v = array[i];
             System.out.print(v + ", ");
 
         }
@@ -42,30 +43,35 @@ public class Task1 {
         int NonEvenNumbers = 0;            //Количество не четных чисел
         int sum = 0;                       //Сумма всех чисел
 
-        for (int j : array) {
+        for (int i = 0, arrayLength = array.length; i < arrayLength; i++) {
+            int j = array[i];
             if (j > 8) {
                 numbersOverEight++;
 
             } else if (j < 8) numbersDownEight++; //проверочный код
 
             else numbersEqualEight++;             //проверочный код
+        }
 
-            for (int k : array) {
-                if (k == 1) {
-                    numbersEqualsOne++;
-                } else numbersNotEqualsOne++;       //проверочный код
-            }
+        for (int i = 0; i < array.length; i++) {
+            int k = array[i];
+            if (k == 1) {
+                numbersEqualsOne++;
+            } else numbersNotEqualsOne++;       //проверочный код
+        }
 
-            for (int a : array) {
-                if (a % 2 == 0) {
-                    EvenNumbers++;
-                } else NonEvenNumbers++;
-            }
+        for (int i = 0; i < array.length; i++) {
+            int a = array[i];
+            if (a % 2 == 0) {
+                EvenNumbers++;
+            } else NonEvenNumbers++;
+        }
 
 
-            for (int c : array) {
-                sum += c;
-            }
+        for (int i = 0; i < array.length; i++) {
+            int c = array[i];
+            sum += c;
+        }
 
             System.out.println("Количество чисел больше восьми : " + numbersOverEight);
             System.out.println("Количество чисел меньше восьми : " + numbersDownEight); // проверочная строка
@@ -75,6 +81,6 @@ public class Task1 {
             System.out.println("Количество четных чисел : " + EvenNumbers);
             System.out.println("Количество не четных чисел : " + NonEvenNumbers);
             System.out.println("Сумма всех чисел : " + sum);
-        }
+
     }
 }
