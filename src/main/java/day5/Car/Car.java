@@ -1,4 +1,4 @@
-package day5;
+package day5.Car;
 
 public class Car {
    private String model;                                                     //Создать класс Автомобиль (англ. Car) с полями
