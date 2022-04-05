@@ -13,6 +13,7 @@ public class Task1 {
     public static void main(String[] args) {
 Car car = new Car();
 Motorbike motorbike = new Motorbike("Bugatti","Red",2022);
+
 car.setModel("Bugatti");car.setColor("Green");car.setProductYear(2020);
 car.info();
         System.out.println(car.yearDifference(2000));
