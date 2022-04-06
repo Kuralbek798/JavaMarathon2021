@@ -76,13 +76,13 @@ public class Airplane {
 
     public void info(){
     System.out.println("Изготовитель: " + getProduser()  + ", год выпуска:  " + getYear() + ", длина: " + getLength() +
-            ", вес: " + getWeight() + ", количество топлива в баке: " + ", количество топлива в баке: " + getFuel());
+            ", вес: " + getWeight() + ", количество топлива в баке: "  + getFuel());
 
 
 }
-Scanner scanner = new Scanner(System.in);
+
 public void filUp(int n ){
-   /* n = scanner.nextInt();*/
+
         setFuel(n );
 }
 
