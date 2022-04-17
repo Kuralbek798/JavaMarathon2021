@@ -1,4 +1,4 @@
-package day7.Task1;
+package outDate;
 
 public class Recrusion {
     public static void main(String[] args) {
@@ -22,7 +22,8 @@ public class Recrusion {
     static boolean isPalindromeRec(String str) {
         if (str.length() <= 1) return true;
         if (str.charAt(0) != str.charAt(str.length() - 1)) return false;   //asddsa
-                                                                           //
+                                                                           //sdds
+                                                                           //...
         return isPalindromeRec(str.substring(1, str.length() - 1));
 
     }
