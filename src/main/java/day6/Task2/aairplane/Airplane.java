@@ -1,4 +1,4 @@
-package day6.Task2;
+package day6.Task2.aairplane;
 
 import java.util.Scanner;
 
