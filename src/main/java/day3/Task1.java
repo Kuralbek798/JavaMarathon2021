@@ -45,7 +45,7 @@ public class Task1 {
                 country.add("Германия");
                 break;
             default:
-                country.add("Неизвестная страна");
+                country.add("Неизвестная /страна");
                 break;
         }
 
