@@ -11,14 +11,11 @@ public class Task6 {
          выведите в консоль таблицу умножения для этой цифры в следующем формате:
 
         */
-        int k = 3;
-
-        for ( int i = 1; i <= 9; i++) {
-         int b =  i * k;
-            System.out.println( i +" * 3 = " + b);
+        String str = "%d x %d = %d\n";
+        int k = 2;
+        for(int i = 1;i <= 3;i++){
+            System.out.printf(str,i,k,i * k);
         }
-
-
 
 
     }

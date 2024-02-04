@@ -11,9 +11,14 @@ public class Task5 {
         То есть на первой итерации цикла, year равен 1980, а на каждой следующей итерации,
         значение year увеличивается на 4. Строки такого вида выводятся до тех пор,
                 пока значение year не станет больше 2020.*/
-        for (int i = 1980; i <= 2020; i+=4) {
-            System.out.println("Олимпиада " + i + " года");
-        }
+
+      String str = "Олимпиада %d года\n";
+      int year = 1980;
+      int stopPrint = 2020;
+
+      for(int i = year; i  <= stopPrint; i +=4 ){
+          System.out.printf(str,i);
+      }
 
     }
 }

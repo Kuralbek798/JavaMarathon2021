@@ -7,9 +7,11 @@ public class Task2 {
         JAVA JAVA JAVA JAVA JAVA JAVA JAVA JAVA JAVA JAVA
 
         2. Повторить задание 1, но используя цикл for.*/
-
-        for (int i = 0; i < 10; i++) {
-            System.out.print("JAVA" + " ");
+        String str = "JAVA";
+        int a = 10;
+        for (int i = 0; i < a; i++) {
+         System.out.print(str + " ");
         }
+
     }
 }

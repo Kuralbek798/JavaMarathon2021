@@ -8,11 +8,13 @@ public class Task1 {
         Вывод в консоль должен быть таким:
         JAVA JAVA JAVA JAVA JAVA JAVA JAVA JAVA JAVA JAVA
 */
+        String str = "JAVA";
         int i = 0;
-        while (i < 10){
+        int a = 10;
+        while (i < a) {
+            System.out.print(str + " " + i);
             i++;
-            System.out.print("JAVA" + " ");
-        }
+       }
+
     }
 }
-
