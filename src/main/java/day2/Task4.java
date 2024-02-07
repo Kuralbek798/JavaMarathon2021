@@ -15,24 +15,19 @@ public class Task4 {
         используя метод System.out.println().
         (Для этих вещественных чисел x и y необходимо использовать тип double и метод nextDouble() у Scanner’а соответственно,
         чтобы считать из консоли число x). */
-
-        Scanner  scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         double x = scanner.nextDouble();
         double y = 0;
-        System.out.println( mathEquations(x,y));
 
-    }
-    public  static  double mathEquations(double x,double y){
-        if (x >= 5){
-            y = (Math.pow(x,2) - 10) / (x + 7);
-        }
-        else if (-3 < x && x < 5){
+        if (x >= 5) {
+            y = (Math.pow(x,2) - 10) / (x - 7);
+            System.out.printf("%.2f ", y);
+        } else if (-3 < x && x < 5) {
             y = (x + 3) / (Math.pow(x,2) - 2);
+            System.out.printf("%.2f ", y);
+        }else{
+            System.out.printf("%.2f ", 420);
         }
-        else {
-            y = 420;
-        }
-    return y;
-    }
 
+    }
 }

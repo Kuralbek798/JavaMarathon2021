@@ -11,28 +11,17 @@ public class Task3 {
         (делится на 5 без остатка и не делится на 10 без остатка), но число 20 не подходит под наше условие
         (делится на 5 без остатка и делится на 10 без остатка). Сами числа a и b в диапазоне не учитывать.
         Если a >= b вывести сообщение "Некоррект sый ввод". */
+
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
         int b = scanner.nextInt();
-
-        numbersRange(a,b);
-    }
-
-    public  static  int numbersRange(int a, int b){
-
-        while ( a+1 !=b) {
-            a++;
+        a = Math.abs(a - b);
+        while (a >= 0) {
+            a--;
             if (a % 5 == 0 && a % 10 != 0) {
-                System.out.print(a +"\t"+"|  ");
-            }
-
-
-            if  (a % 10 == 0){
-                System.out.println(a);
+                System.out.printf("%d ", a);
             }
         }
-
-        return a;
     }
 
 
