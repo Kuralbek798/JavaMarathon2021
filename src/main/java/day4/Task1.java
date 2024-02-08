@@ -10,77 +10,42 @@ package day4;
         д) Количестве нечетных чисел
         е) Сумме всех элементов массива*/
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Task1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] array = new int[n];
+        int[] intArray = new int[inputNumberMethod()];
         Random random = new Random();
-
-        for (int i = 0; i < array.length; i++) {
-
-            array[i] = random.nextInt(9) + 1;
-
+        for (int i = 0; i < intArray.length; i++) {
+            intArray[i] = random.nextInt(10);
         }
-
-
-        System.out.println("Длинна массива : " + array.length);
-        for (int i = 0; i < array.length; i++) {
-            int v = array[i];
-            System.out.print(v + ", ");
-
+        int quantityBiggerEight = 0;
+        int quantityEqualOne = 0;
+        int quantityEvens = 0;
+        int quantityNonEvens = 0;
+        int sum = 0;
+        for (int value : intArray) {
+            if (value > 8) {
+                quantityBiggerEight++;
+            } else if (value == 1) {
+                quantityEqualOne++;
+            }
+            if (value % 2 == 0) {
+                quantityEvens++;
+            } else {
+                quantityNonEvens++;
+            }
+            sum += value;
         }
-        System.out.println();
-        int numbersOverEight = 0;          //Количестве чисел больше 8
-        int numbersDownEight = 0;        //проверочная количество чисел меньше 8
-        int numbersEqualEight = 0;        //проверочнное количество чисел равных 8
-        int numbersEqualsOne = 0;          //Количестве чисел равных 1
-        int numbersNotEqualsOne = 0;       //проверочная количество чисел не равных 1
-        int EvenNumbers = 0;               //Количество четныж чисел
-        int NonEvenNumbers = 0;            //Количество не четных чисел
-        int sum = 0;                       //Сумма всех чисел
+        System.out.printf(
+                "Количество чисел  больше 8: %d\nКоличество равное  1: %d\nКоличеств четных чисел: %d\nКоличество не четных чисел: %d\nСумма всех чисел массива: %d\n",
+                quantityBiggerEight, quantityEqualOne, quantityEvens, quantityNonEvens, sum);
 
-        for (int i = 0, arrayLength = array.length; i < arrayLength; i++) {
-            int j = array[i];
-            if (j > 8) {
-                numbersOverEight++;
+    }
 
-            } else if (j < 8) numbersDownEight++; //проверочный код
-
-            else numbersEqualEight++;             //проверочный код
-        }
-
-        for (int i = 0; i < array.length; i++) {
-            int k = array[i];
-            if (k == 1) {
-                numbersEqualsOne++;
-            } else numbersNotEqualsOne++;       //проверочный код
-        }
-
-        for (int i = 0; i < array.length; i++) {
-            int a = array[i];
-            if (a % 2 == 0) {
-                EvenNumbers++;
-            } else NonEvenNumbers++;
-        }
-
-
-        for (int i = 0; i < array.length; i++) {
-            int c = array[i];
-            sum += c;
-        }
-
-            System.out.println("Количество чисел больше восьми : " + numbersOverEight);
-            System.out.println("Количество чисел меньше восьми : " + numbersDownEight); // проверочная строка
-            System.out.println("Количество чисел равных восьми : " + numbersEqualEight); // проверочная строка
-            System.out.println("Количество чисел равных одному : " + numbersEqualsOne);
-            System.out.println("Количество чисел не равных одному : " + numbersNotEqualsOne); //проверочная количество чисел не равных 1
-            System.out.println("Количество четных чисел : " + EvenNumbers);
-            System.out.println("Количество не четных чисел : " + NonEvenNumbers);
-            System.out.println("Сумма всех чисел : " + sum);
-
+    public static int inputNumberMethod() {
+        Scanner scanner = new Scanner(System.in);
+        var inputNumber = scanner.nextInt();
+        return inputNumber;
     }
 }

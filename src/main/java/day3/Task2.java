@@ -11,19 +11,5 @@ package day3;
 import java.util.Scanner;
 
 public class Task2 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-         double divisible = scanner.nextDouble();
-         double divider = scanner.nextDouble();
-         calculator(divisible,divider);
-    }
 
-    public static void calculator(double divisible, double divider) {
-     if (divisible == 0 || divider == 0){
-         System.out.println("На ноль делить нельзя");
-         return;
-
-     }
-        System.out.println(divisible/divider);
-    }
 }
