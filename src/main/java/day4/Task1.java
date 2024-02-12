@@ -40,9 +40,7 @@ public class Task1 {
         System.out.printf(
                 "Количество чисел  больше 8: %d\nКоличество равное  1: %d\nКоличеств четных чисел: %d\nКоличество не четных чисел: %d\nСумма всех чисел массива: %d\n",
                 quantityBiggerEight, quantityEqualOne, quantityEvens, quantityNonEvens, sum);
-
     }
-
     public static int inputNumberMethod() {
         Scanner scanner = new Scanner(System.in);
         var inputNumber = scanner.nextInt();

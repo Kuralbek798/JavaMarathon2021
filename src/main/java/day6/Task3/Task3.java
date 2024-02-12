@@ -1,4 +1,9 @@
-package day6;
+package day6.Task3;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class Task3 {
     /*. Создать класс Teacher (Преподаватель), имеющий поля “Имя”, “Предмет”. Создать класс Student (Студент) с полем “Имя”.
@@ -9,12 +14,37 @@ public class Task3 {
     Все слова, написанные большими буквами, должны быть заменены соответствующими значениями.
     ОЦЕНКА должна принимать значения "отлично”, "хорошо”, "удовлетворительно" или "неудовлетворительно",
     в зависимости от значения случайно сгенерированного числа.
-
 */
-    public static void main(String[] args) {
-        Student student= new Student("Bob");
-        Teacher teacher= new Teacher("Nansy","Matn");
 
-        teacher.evaluateStudent(student);
+
+
+
+        public class Main {
+            public static void main(String[] args) {
+                try {
+                    String baseUrl = "https://api.example.com/data";
+                    String param1 = "value1";
+                    String param2 = "value2";
+
+                    String fullUrl = baseUrl + "?param1=" + param1 + "&param2=" + param2;
+
+                    URL url = new URL(fullUrl);
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+
+                    BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                    String inputLine;
+                    StringBuffer response = new StringBuffer();
+
+                    while ((inputLine = in.readLine()) != null) {
+                        response.append(inputLine);
+                    }
+                    in.close();
+
+                    System.out.println(response.toString());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
-}

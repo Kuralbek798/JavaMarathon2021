@@ -12,7 +12,7 @@ public class Task1 {
         int i = 0;
         int a = 10;
         while (i < a) {
-            System.out.print(str + " " + i);
+            System.out.print(str + " ");
             i++;
        }
 

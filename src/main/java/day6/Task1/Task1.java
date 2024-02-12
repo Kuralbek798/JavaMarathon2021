@@ -11,15 +11,16 @@ package day6.Task1;
 
 public class Task1 {
     public static void main(String[] args) {
+
 Car car = new Car();
-Motorbike motorbike = new Motorbike("Bugatti","Red",2022);
-
-car.setModel("Bugatti");car.setColor("Green");car.setProductYear(2020);
+car.setModel("Toyota");
+car.setColor("Green");
+car.setProductionYear(2020);
 car.info();
-        System.out.println(car.yearDifference(2000));
+System.out.printf("разница в годах автомобиля: %d\n",car.yearDifference(2024));
+Motorbike motorbike = new Motorbike("Yamaha", "red", 2020);
 motorbike.info();
-        System.out.println(motorbike.yearDifference(2000));
-
+System.out.printf("разница в годах мотоцикла: %d\n",motorbike.yearDifference(2024));
 
 
     }

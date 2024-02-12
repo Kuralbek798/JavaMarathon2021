@@ -1,10 +1,9 @@
 package day5.Car;
 
-public class Car {
-   private String model;                                                     //Создать класс Автомобиль (англ. Car) с полями
-   private String  color;                                                    // “Модель”, “Цвет”, “Год выпуска”.
-   private int productYear;
+import java.util.Calendar;
+import java.util.Date;
 
+public class Car {
    public String getModel() {
       return model;
    }
@@ -21,11 +20,19 @@ public class Car {
       this.color = color;
    }
 
-   public int getProductYear() {
-      return productYear;
+   public Calendar getProductDate() {
+      return productDate;
    }
 
-   public void setProductYear(int productYear) {
-      this.productYear = productYear;
+   public void setProductDate(Calendar productDate) {
+      this.productDate = productDate;
    }
+
+   private String model;
+   private String color;
+   private Calendar productDate;
+
+
+
+
 }

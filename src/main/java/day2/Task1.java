@@ -18,7 +18,7 @@ Scanner scanner = new Scanner(System.in);
  }
 
  if(floorNumber == 1 || floorNumber == 2 || floorNumber == 3 || floorNumber ==4){
-     System.out.print("Малоэтажный дом");
+     System.out.println("Малоэтажный дом");
  }
  else if(floorNumber == 5 || floorNumber == 6 || floorNumber == 7 || floorNumber == 8){
      System.out.print("Среднеэтажный дом");
