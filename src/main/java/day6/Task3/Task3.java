@@ -19,32 +19,12 @@ public class Task3 {
 
 
 
-        public class Main {
+
             public static void main(String[] args) {
-                try {
-                    String baseUrl = "https://api.example.com/data";
-                    String param1 = "value1";
-                    String param2 = "value2";
+               Teacher teacher = new Teacher("Bob", "math");
+               Student student = new Student("Jhon");
+               teacher.evaluete(student);
 
-                    String fullUrl = baseUrl + "?param1=" + param1 + "&param2=" + param2;
-
-                    URL url = new URL(fullUrl);
-                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    connection.setRequestMethod("GET");
-
-                    BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                    String inputLine;
-                    StringBuffer response = new StringBuffer();
-
-                    while ((inputLine = in.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-                    in.close();
-
-                    System.out.println(response.toString());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
             }
-        }
+
     }
