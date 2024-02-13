@@ -9,7 +9,9 @@ public class Task1 {
     и выводит сообщение в консоль о том, какой из самолетов длиннее.
 */
    public static void main(String[] args) {
-
+     AirlplaneTwo airlplaneTwo = new AirlplaneTwo("Boeing",1981,7000,200);
+     AirlplaneTwo airlplaneTwo1 = new AirlplaneTwo("Scatt",2023,4000,150);
+     AirlplaneTwo.compareAirplane(airlplaneTwo1,airlplaneTwo);
    }
 
 

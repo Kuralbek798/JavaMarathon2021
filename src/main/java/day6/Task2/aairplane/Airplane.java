@@ -4,6 +4,8 @@ package day6.Task2.aairplane;
 
 public class Airplane {
 
+
+
     public String getProducer() {
         return producer;
     }

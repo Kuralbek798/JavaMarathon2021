@@ -1,5 +1,9 @@
 package day7.Task2;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Task2 {
     /*2. Дворовый футбол.
     Для игры в футбол во дворе требуется 6 человек (3х3). Класс Игрок (англ. Player) содержит следующие поля:
@@ -21,6 +25,30 @@ public class Task2 {
     количество игроков на поле меняться не должно, проверить это.
 */
     public static void main(String[] args) {
+        Player.addPlayers();
+        Player.info();
+        Random random = new Random();
+        int index = random.nextInt(0, 3);
+        int teamChoose = random.nextInt(0, 2);
+        for (int i = 0; i < 10; i++) {
+            if (teamChoose == 0) {
+                Player.run(Player.getTeamTwo().get(index));
+            } else {
+                Player.run(Player.getTeamOne().get(index));
+            }
+        }
+
+        if (Player.getTeamTwo().get(index).getStamina() == 0) {
+            System.out.println(Player.getTeamTwo().get(index).getStamina());
+            Player.getTeamTwo().remove(index);
+            Player.setCountPlayers(Player.getCountPlayers() - 1);
+        }
+        if (Player.getTeamOne().get(index).getStamina() == 0) {
+            System.out.println(Player.getTeamOne().get(index).getStamina());
+            Player.getTeamOne().remove(index);
+            Player.setCountPlayers(Player.getCountPlayers() - 1);
+        }
+        Player.info();
 
     }
 }
