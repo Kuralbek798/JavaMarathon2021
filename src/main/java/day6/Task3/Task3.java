@@ -15,16 +15,11 @@ public class Task3 {
     ОЦЕНКА должна принимать значения "отлично”, "хорошо”, "удовлетворительно" или "неудовлетворительно",
     в зависимости от значения случайно сгенерированного числа.
 */
-
-
-
-
-
-            public static void main(String[] args) {
-               Teacher teacher = new Teacher("Bob", "math");
-               Student student = new Student("Jhon");
-               teacher.evaluete(student);
-
-            }
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher("Bob", "math");
+        Student student = new Student("Jhon");
+        teacher.evaluete(student);
 
     }
+
+}
