@@ -1,9 +1,7 @@
 package day6.Task2.aairplane;
 
 
-
 public class Airplane {
-
 
 
     public String getProducer() {
@@ -59,28 +57,35 @@ public class Airplane {
                Изменить год выпуска и длину с помощью сеттеров, вызвать метод fillUp(int n) два раза,
                передав разные значения. Вызвать метод info().
            */
-private String producer;
-private int year;
-private int length;
-private int weight;
-private int fuel;
+    private String producer;
+    private int year;
+    private int length;
+    private int weight;
+    private int fuel;
 
-   public Airplane(String producer, int year, int length, int wight) {
-      this.producer = producer;
-      this.year = year;
-      this.length = length;
-      this.weight = wight;
-      this.fuel = 0;
-   }
- public  void info(){
-      System.out.printf("Изготовитель: %s\n", this.producer);
-      System.out.printf("год выпуска: %s\n", this.year);
-      System.out.printf("длина: %s\n",this.length);
-      System.out.printf("вес: %s\n",this.weight);
-      System.out.printf("количество топлива в баке: %s\n",this.fuel);
- }
- public void filItUp(int fuel){
-      this.fuel = fuel;
- }
+    public Airplane(String producer, int year, int length, int wight) {
+        this.producer = producer;
+        this.year = year;
+        this.length = length;
+        this.weight = wight;
+        this.fuel = 0;
+    }
 
+    public void info() {
+        System.out.printf("Изготовитель: %s\n", this.producer);
+        System.out.printf("год выпуска: %s\n", this.year);
+        System.out.printf("длина: %s\n", this.length);
+        System.out.printf("вес: %s\n", this.weight);
+        System.out.printf("количество топлива в баке: %s\n", this.fuel);
+    }
+
+    public void filItUp(int fuel) {
+        this.fuel = fuel;
+    }
+
+    @Override
+    public String toString() {
+        return System.out.printf("Изготовитель: %s\nгод выпуска: %s\nдлина: %s\nвес: %s\nколичество топлива в баке: %s\n",
+                this.producer, this.year, this.length, this.weight, this.fuel).toString();
+    }
 }
