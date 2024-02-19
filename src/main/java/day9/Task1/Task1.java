@@ -32,6 +32,13 @@ super)
 объектах и посмотрите на результат.*/
     public static void main(String[] args) {
         Human human = new Human("Bob");
+        Student student = new Student("Jhon","Programmer");
+        Teacher teacher = new Teacher("Mike","Java");
         human.printInfo();
+        student.printInfo();
+        student.toString();
+        teacher.printInfo();
+        teacher.toString();
+
     }
 }
