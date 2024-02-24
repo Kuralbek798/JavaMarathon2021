@@ -31,6 +31,11 @@ doWork() у каждого. Проконтролировать, что у скл
 хранение ссылки на объект Warehouse и передавайте ее с помощью конструктора или
 set метода.*/
     public static void main(String[] args) {
-
+        Warehouse warehouse = new Warehouse();
+        warehouse.setBalance(324.234);
+        warehouse.setCountOrder(424);
+        Picker picker = new Picker(warehouse);
+        picker.doWork();
+      System.out.print(warehouse.toString());
     }
 }
