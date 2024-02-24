@@ -15,13 +15,11 @@ public class Triangle extends Figure {
         this.b = b;
         this.c = c;
     }
-
     @Override
     public double area() {
-        double halfPerimeter = perimeter() / 2;
-        return  Math.sqrt(halfPerimeter * (halfPerimeter - a)*(halfPerimeter - b)*(halfPerimeter - c)) ;
+        double s = perimeter() / 2;
+        return  Math.sqrt(s * (s - a)*(s - b)*(s - c)) ;
     }
-
     @Override
     public double perimeter() {
         return a + b + c;

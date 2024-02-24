@@ -46,40 +46,37 @@ public static double calculateRedArea(Figure[] figures)
 геометрических фигур, должен вернуть сумму площадей красных фигур.
 Вызовите эти два метода на массиве figures и выведите результат в консоль.*/
     public static void main(String[] args) {
-     /*   Circle circle = new Circle("sdf",3234);
-        Rectangle rectangle = new Rectangle("green",22,33);
-        Triangle triangle = new Triangle("Orange",12,44,33);
-        System.out.printf("%.4f\n%.4f\n",circle.area(),circle.perimeter());
-        System.out.printf("%.4f\n%.4f\n",rectangle.area(),rectangle.perimeter());
-        System.out.printf("%.4f\n%.4f\n",triangle.area(),triangle.area());*/
-        Figure[] figures ={new Triangle (10,10,10,"Red"),
-                new Triangle (10,20,30,"Green"),
-                new Triangle (10,20,15,"Red"),
-                new Rectangle (5,10,"Red"),
-                new Rectangle (40,15,"Orange"),
-                new Circle (4,"Red"),
-                new Circle (10,"Red"),
-                new Circle (5,"Blue")};
-       System.out.printf("Сумма периметров геометрических фигур красного цвета %.4f\n", calculateRedPerimeter(figures));
-       System.out.printf("Cумма площадей геометрических фигур красного цвета  %.4f\n",calculateRedArea(figures));
+
+        Figure[] figures = {
+                new Triangle(10, 10, 10, "Red"),
+                new Triangle(10, 20, 30, "Green"),
+                new Triangle(10, 20, 15, "Red"),
+                new Rectangle(5, 10, "Red"),
+                new Rectangle(40, 15, "Orange"),
+                new Circle(4, "Red"),
+                new Circle(10, "Red"),
+                new Circle(5, "Blue")};
+        System.out.printf("Сумма периметров геометрических фигур красного цвета %.4f\n", calculateRedPerimeter(figures));
+        System.out.printf("Cумма площадей геометрических фигур красного цвета  %.4f\n", calculateRedArea(figures));
 
     }
 
-    public static double calculateRedPerimeter(Figure[] figures){
+    public static double calculateRedPerimeter(Figure[] figures) {
         double sum = 0;
         for (int i = 0; i < figures.length; i++) {
-            if(figures[i].getColor() == "Red"){
+            if (figures[i].getColor() == "Red") {
                 sum += figures[i].perimeter();
             }
         }
         return sum;
     }
-    public static double calculateRedArea(Figure[] figures){
+
+    public static double calculateRedArea(Figure[] figures) {
         double sum = 0;
         for (int i = 0; i < figures.length; i++) {
-         if(figures[i].getColor() == "Red"){
-             sum += figures[i].area();
-         }
+            if (figures[i].getColor() == "Red") {
+                sum += figures[i].area();
+            }
         }
         return sum;
     }
