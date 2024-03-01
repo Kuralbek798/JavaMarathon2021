@@ -36,6 +36,6 @@ set метода.*/
         warehouse.setCountOrder(424);
         Picker picker = new Picker(warehouse);
         picker.doWork();
-      System.out.print(warehouse.toString());
+        System.out.print(warehouse.toString());
     }
 }
