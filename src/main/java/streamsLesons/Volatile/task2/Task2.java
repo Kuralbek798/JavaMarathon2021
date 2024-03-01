@@ -18,7 +18,7 @@ public class Task2 {
         thread1.start();
         thread1.join();
         thread.join();
-        System.out.printf("The final result of abc: %d\n", sharingVariable.getA());
+        System.out.printf("The final result of abc: %d.\n", sharingVariable.getA());
     }
 }
 
